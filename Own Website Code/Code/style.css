@@ -1,0 +1,328 @@
+
+  @font-face {
+      font-family: "lovela";
+      src: url("./Fonts/Zetafonts - Lovelace Text Regular.otf");
+  }
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    
+  }
+  
+  /* Remove default margin */
+  main,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+  main{
+      background-color: #F0EFEE;
+      
+  }
+ .color{
+     background-color:white;
+ }
+
+ .sizet{
+    margin-left: 10px;
+ }
+ .sizet2{
+     margin-right: 15px;
+ }
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
+  
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+  
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display:block ;
+  }
+  
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+  
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-400);
+  
+    background-color: hsl(var(--clr-neutral-200));
+  }
+  
+  h1,
+  h2,
+  h3 {
+    font-weight: var(--fw-700);
+  }
+  
+  /* utilities */
+  .flex {
+    display: inline;
+  }
+  
+  .flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-spacer, 1em);
+  }
+  
+  .bg-primary-400 {
+    background: hsl(var(--clr-primary-400));
+  }
+  .bg-secondary-400 {
+    background: hsl(var(--clr-secondary-400));
+  }
+  .bg-secondary-500 {
+    background: hsl(var(--clr-secondary-500));
+  }
+  
+  .bg-neutral-100 {
+    background: hsl(var(--clr-neutral-100));
+  }
+  
+  .text-neutral-100 {
+    color: hsl(var(--clr-neutral-100));
+  }
+  .text-secondary-400 {
+    color: hsl(var(--clr-secondary-400));
+  }
+  
+  
+  /* components */
+  .testimonial-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+     'one'
+     'two'
+     'three'
+     'four'
+     'five'
+     'six';
+  
+    padding-block: 0.5rem;
+    width: 50%;
+    margin-inline: left;
+    
+    
+  }
+  
+  .testimonial {
+      height: auto;
+    font-size: var(--fs-400);
+    padding: 0rem;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
+  }
+  
+  .testimonial:nth-child(1) {
+    grid-area: one;
+  }
+  .testimonial:nth-child(2) {
+    grid-area: two;
+  }
+  .testimonial:nth-child(3) {
+    grid-area: three;
+  }
+  .testimonial:nth-child(4) {
+    grid-area: four;
+  }
+  .testimonial:nth-child(5) {
+    grid-area: five;
+  }
+  .testimonial:nth-child(6) {
+    grid-area: six;
+  }
+  
+  @media only screen and (min-width: 33em) {
+    .testimonial-grid {
+      grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+  };
+  .testimonial-grid {
+    width: auto;
+  }
+  .sizet2{
+    margin-left: 15px;
+  }
+};
+  
+  @media only screen and (min-width: 38em) {
+    .testimonial-grid {
+      grid-template-areas:
+      "one "
+      "two " 
+      "three"
+      "four"
+      "five"; 
+      
+  };
+  .testimonial-grid {
+    width: auto;
+  }
+  
+  .sizet2{
+    margin-left: 15px;
+  }
+};
+  
+  @media only screen and (min-width: 54em) {
+    .testimonial-grid {
+        grid-template-areas:
+        "one "
+        "two " 
+        "three"
+        "four"
+        "five"; 
+    
+    };
+    
+    .sizet2{
+      margin-left: 15px;
+    }
+  }
+  
+  @media only screen and (min-width: 75em) {
+    .testimonial-grid {
+        grid-template-areas:
+        "one two"
+        "one four" 
+        "three four"
+        "five five";  
+
+    }
+  };
+  
+.jonath{
+    height: 260px;
+    object-fit:cover;
+    background-size: contain;
+   
+
+
+}
+.kirapic{
+    height: 300px;
+    object-fit: cover;
+}
+
+.ccreator{
+  object-fit: cover;
+  height: 325px;
+  background-position: bottom;
+}
+
+h2.agent{
+  font-size: 28px;
+}
+h2.candle{
+  font-size: 33px;
+}
+  .testimonial img {
+    position: relative;
+    width: 100%;
+    border-radius: 0px;
+    margin-bottom: 20px;
+    
+  }
+
+  .skit{
+    object-fit:cover;
+      height: 400px;
+  }
+  
+  .testimonial .name {
+      position: block;
+      margin-left: 5%;
+      margin-right: 5%;
+      font-size: 30px;
+      font-family:'lovela';
+    
+  }
+  
+  .testimonial .position {
+    font-size: var(--fs-300);
+    opacity: 0.5;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: "lovela";
+    
+  }
+  
+  .testimonial > p:first-of-type {
+    font-size: var(--fs-500);
+    line-height: 1.2;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+   
+    
+    
+  }
+  
+  .testimonial > p:last-of-type {
+    opacity: 0.7;
+    margin-left: 5%;
+    margin-right: 5%;
+    float: right;
+    font-size: 18px;
+    padding-bottom: 10px;
+
+  }
